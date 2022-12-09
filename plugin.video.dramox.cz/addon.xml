@@ -1,0 +1,24 @@
+﻿<addon id="plugin.video.dramox.cz" name="Dramox" provider-name="waladir" version="1.0.0">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.inputstreamhelper" version="0.4.2"/>    
+  </requires>
+  <extension library="main.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="cs_CZ">Dramox</summary>
+    <description lang="cs_CZ">
+Doplněk pro Dramox, který nabízí divadelní hry z desítek nejen českých scén
+Je potřeba mít zřízený účet a aktivní předplatné na dramox.cz!
+    </description>    
+    <platform>all</platform>
+    <news>
+v1.0.0 (09.12.2022)
+- první verze
+    </news>
+    <assets>
+        <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>

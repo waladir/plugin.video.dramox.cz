@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<category label="Nastavení">
+                <setting label="Email" type="text" id="email" default=""/>
+                <setting label="Heslo" type="text" id="password" option="hidden" enable="!eq(-1,false)" default=""/>
+                <setting label="Řadit divadla podle" type="select" id="order" values="popularity|abecedy|datumu přidání" default="popularity"/>
+                <setting label="Omezit výsledky na oblíbená divadla" type="bool" id="filter_favourites" default="false"/>
+                <setting label="InputStream Helper/Widevine" type="lsep"/>
+                <setting label="Zobrazení informací" type="action" action="RunScript(script.module.inputstreamhelper,info)"/>
+                <setting label="Nastavení InputStream Helper" type="action" action="Addon.OpenSettings(script.module.inputstreamhelper)" option="close"/>                              
+                <setting label="(Re)instalovat Widevine CDM" type="action" action="RunScript(script.module.inputstreamhelper,widevine_install)" visible="!system.platform.android"/>  
+                <setting label="Odstranit Widevine CDM..." type="action" action="RunScript(script.module.inputstreamhelper, widevine_remove)" visible="!system.platform.android"/>
+	</category>
+</settings>
